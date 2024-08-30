@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../Images/Fondo2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden; /* Permite el desplazamiento vertical, evita el horizontal */
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.Volver {
+    width: 120px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #B8860B;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .5s;
+    display: inline-flex; /* Asegura que el botón se comporte correctamente con el enlace dentro */
+    align-items: center; /* Centra verticalmente el contenido dentro del botón */
+    justify-content: center; /* Centra horizontalmente el contenido dentro del botón */
+    padding: 0;
+}
+
+.Volver a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del botón */
+    width: 100%; /* Asegura que el enlace ocupe todo el botón */
+    height: 100%; /* Asegura que el enlace ocupe todo el botón */
+    display: inline-flex; /* Asegura que el enlace se comporte correctamente dentro del botón */
+    align-items: center; /* Centra verticalmente el texto dentro del enlace */
+    justify-content: center; /* Centra horizontalmente el texto dentro del enlace */
+}
+/* ? ----- PORTADA ----- */
+.portada {
+    width: 100%;
+    min-height: 100vh;
+    position: relative; /* Cambiado de fixed a relative para permitir el desplazamiento */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .5s ease-out all;
+}
+
+.portada.oculta {
+    transform: translateY(100%);
+}
+
+.portada .header {
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.portada .header .logotipo {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.portada .header .mensaje {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* ? ----- MAIN ----- */
+main {
+    max-width: 1000px;
+    margin: auto;
+    width: 90%;
+    padding: 60px 0;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+}
+
+/* ? ----- Cuenta Regresiva ----- */
+#cuenta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+}
+
+.simply-section {
+    background: #fff;
+    width: 180px;
+    height: 180px;
+    margin: 0 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Permite que los elementos se ajusten */
+}
+
+.simply-amount {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.simply-word {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+/* ? ----- REDES SOCIALES ----- */
+.redes-sociales .btn-red-social {
+    padding: 15px 0;
+    display: inline-block;
+    min-width: 120px;
+    border-radius: 5px;
+    background: #FF0000;
+    color: #fff;
+    font-size: 30px;
+    margin: 0 20px;
+    transition: .3s ease all;
+}
+
+.redes-sociales .btn-red-social:hover {
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,.15);
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    .portada .header .logotipo {
+        font-size: 40px;
+    }
+
+    .portada .header .mensaje {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 40px 0;
+        font-size: 16px;
+    }
+
+    #cuenta {
+        margin-bottom: 50px;
+    }
+
+    .simply-section {
+        width: 150px;
+        height: 150px;
+    }
+
+    .simply-amount {
+        font-size: 40px;
+    }
+
+    .simply-word {
+        font-size: 25px;
+    }
+
+    .redes-sociales .btn-red-social {
+        font-size: 28px;
+        padding: 10px 0;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portada .header .logotipo {
+        font-size: 30px;
+    }
+
+    .portada .header .mensaje {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 30px 0;
+        font-size: 14px;
+    }
+
+    #cuenta {
+        margin-bottom: 30px;
+        flex-direction: column; /* Apila los elementos en lugar de alinearlos horizontalmente */
+    }
+
+    .simply-section {
+        width: 120px;
+        height: 120px;
+        margin: 10px 0; /* Ajusta el margen en pantallas más pequeñas */
+    }
+
+    .simply-amount {
+        font-size: 30px;
+    }
+
+    .simply-word {
+        font-size: 20px;
+    }
+
+    .redes-sociales .btn-red-social {
+        font-size: 24px;
+        padding: 8px 0;
+        min-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portada .header .logotipo {
+        font-size: 24px;
+    }
+
+    .portada .header .mensaje {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 20px 0;
+        font-size: 12px;
+    }
+
+    #cuenta {
+        margin-bottom: 20px;
+    }
+
+    .simply-section {
+        width: 100px;
+        height: 100px;
+    }
+
+    .simply-amount {
+        font-size: 25px;
+    }
+
+    .simply-word {
+        font-size: 18px;
+    }
+
+    .redes-sociales .btn-red-social {
+        font-size: 20px;
+        padding: 6px 0;
+        min-width: 60px;
+    }
+}
